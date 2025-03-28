@@ -6,7 +6,6 @@ import (
 	"database/sql"
 	"encoding/base64"
 	"fmt"
-	"regexp"
 	"strings"
 	"time"
 
@@ -720,11 +719,11 @@ func IsDuplicatedEmail(tx *storage.Connection, email, aud string, currentUser *U
 	baseLocalPart := strings.Split(localPart, "+")[0]
 
 	// Find all identities with similar email patterns
+	similarEmailQuery := fmt.Sprintf("(email = '%s@%s' OR email LIKE '%s+%%@%s')",
+		baseLocalPart, domain,
+		baseLocalPart, domain)
+	// Find all identities with similar email patterns
 	var identities []Identity
-	similarEmailQuery := fmt.Sprintf("email ~* '^%s(\\+.*)?@%s$'",
-		regexp.QuoteMeta(baseLocalPart),
-		regexp.QuoteMeta(domain))
-
 	if err := tx.Eager().Q().Where(similarEmailQuery).All(&identities); err != nil {
 		if errors.Cause(err) == sql.ErrNoRows {
 			return nil, nil

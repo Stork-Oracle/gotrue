@@ -178,6 +178,10 @@ func (ts *UserTestSuite) TestIsDuplicatedEmail() {
 	e, err = IsDuplicatedEmail(ts.db, "david.calavera@netlify.com", "other-aud", nil)
 	require.NoError(ts.T(), err)
 	require.Nil(ts.T(), e, "expected same email to not be duplicated")
+
+	e, err = IsDuplicatedEmail(ts.db, "david+test@netlify.com", "test", nil)
+	require.NoError(ts.T(), err)
+	require.Nil(ts.T(), e, "expected same email to not be duplicated")
 }
 
 func (ts *UserTestSuite) createUser() *User {
