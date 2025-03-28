@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 func sort(r *http.Request, allowedFields map[string]bool, defaultSort []models.SortField) (*models.SortParams, error) {

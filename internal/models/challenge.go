@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"github.com/go-webauthn/webauthn/webauthn"
 	"github.com/gofrs/uuid"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/storage"
 	"time"
 )
 

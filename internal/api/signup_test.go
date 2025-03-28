@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	mail "github.com/supabase/auth/internal/mailer"
+	mail "github.com/stork-oracle/gotrue/internal/mailer"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 type SignupTestSuite struct {

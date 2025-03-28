@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"

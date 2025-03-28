@@ -14,9 +14,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 type InviteTestSuite struct {

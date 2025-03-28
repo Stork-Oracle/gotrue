@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/mitchellh/mapstructure"
-	"github.com/supabase/auth/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/conf"
 	"golang.org/x/oauth2"
 )
 

@@ -3,11 +3,11 @@ package api
 import (
 	"net/http"
 
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/api/sms_provider"
-	mail "github.com/supabase/auth/internal/mailer"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/api/sms_provider"
+	mail "github.com/stork-oracle/gotrue/internal/mailer"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 // ResendConfirmationParams holds the parameters for a resend request

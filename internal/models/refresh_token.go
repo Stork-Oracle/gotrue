@@ -8,9 +8,9 @@ import (
 	"github.com/gobuffalo/pop/v6"
 	"github.com/gofrs/uuid"
 	"github.com/pkg/errors"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/storage"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 // RefreshToken is the database model for refresh tokens.

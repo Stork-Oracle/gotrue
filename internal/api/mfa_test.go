@@ -13,12 +13,12 @@ import (
 	"github.com/gofrs/uuid"
 
 	"github.com/pquerna/otp"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/api/sms_provider"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/api/sms_provider"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 
 	"github.com/pquerna/otp/totp"
 	"github.com/stretchr/testify/require"

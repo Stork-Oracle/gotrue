@@ -2,7 +2,7 @@
 package docs
 
 import (
-	"github.com/supabase/auth/internal/api"
+	"github.com/stork-oracle/gotrue/internal/api"
 )
 
 // swagger:route GET /verify verify verify-get

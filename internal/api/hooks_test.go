@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/hooks"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/hooks"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/storage"
 
 	"gopkg.in/h2non/gock.v1"
 )

@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 var filterColumnMap = map[string][]string{

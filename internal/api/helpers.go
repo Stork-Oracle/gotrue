@@ -7,11 +7,11 @@ import (
 	"net/http"
 
 	"github.com/pkg/errors"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/security"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/security"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 func sendJSON(w http.ResponseWriter, status int, obj interface{}) error {

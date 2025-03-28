@@ -13,11 +13,11 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"github.com/supabase/auth/internal/api"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/reloader"
-	"github.com/supabase/auth/internal/storage"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/reloader"
+	"github.com/stork-oracle/gotrue/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 var serveCmd = cobra.Command{

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/supabase/auth/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/conf"
 	"golang.org/x/sync/errgroup"
 )
 

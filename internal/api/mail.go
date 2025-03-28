@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/supabase/auth/internal/hooks"
-	mail "github.com/supabase/auth/internal/mailer"
+	"github.com/stork-oracle/gotrue/internal/hooks"
+	mail "github.com/stork-oracle/gotrue/internal/mailer"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
@@ -15,12 +15,12 @@ import (
 	"github.com/fatih/structs"
 	"github.com/pkg/errors"
 	"github.com/sethvargo/go-password/password"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/api/provider"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/storage"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/api/provider"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 var (

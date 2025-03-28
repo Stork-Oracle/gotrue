@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/storage"
-	"github.com/supabase/auth/internal/storage/test"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/storage/test"
 )
 
 type SessionsTestSuite struct {

@@ -17,11 +17,11 @@ import (
 	"github.com/sirupsen/logrus"
 	standardwebhooks "github.com/standard-webhooks/standard-webhooks/libraries/go"
 
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/hooks"
-	"github.com/supabase/auth/internal/observability"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/hooks"
+	"github.com/stork-oracle/gotrue/internal/observability"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 const (

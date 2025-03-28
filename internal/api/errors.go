@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/observability"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/observability"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 // Common error messages during signup flow

@@ -8,14 +8,14 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/supabase/auth/internal/hooks"
+	"github.com/stork-oracle/gotrue/internal/hooks"
 
 	"github.com/pkg/errors"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/api/sms_provider"
-	"github.com/supabase/auth/internal/crypto"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/api/sms_provider"
+	"github.com/stork-oracle/gotrue/internal/crypto"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 var e164Format = regexp.MustCompile("^[1-9][0-9]{1,14}$")

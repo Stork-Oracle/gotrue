@@ -8,10 +8,10 @@ import (
 
 	"github.com/mrjones/oauth"
 	"github.com/sirupsen/logrus"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/api/provider"
-	"github.com/supabase/auth/internal/observability"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/api/provider"
+	"github.com/stork-oracle/gotrue/internal/observability"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 // OAuthProviderData contains the userData and token returned by the oauth provider

@@ -6,8 +6,8 @@ import (
 	"net/url"
 
 	"github.com/sirupsen/logrus"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 // Mailer defines the interface a mailer must implement.

@@ -10,8 +10,8 @@ import (
 
 	jwt "github.com/golang-jwt/jwt/v5"
 	"github.com/stretchr/testify/require"
-	"github.com/supabase/auth/internal/api/provider"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/api/provider"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 func (ts *ExternalTestSuite) TestSignupExternalKakao() {

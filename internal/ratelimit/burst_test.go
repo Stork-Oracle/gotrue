@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/supabase/auth/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/conf"
 )
 
 func Example_newBurstLimiter() {

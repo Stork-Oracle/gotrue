@@ -13,11 +13,11 @@ import (
 
 	chimiddleware "github.com/go-chi/chi/v5/middleware"
 	"github.com/sirupsen/logrus"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/observability"
-	"github.com/supabase/auth/internal/security"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/observability"
+	"github.com/stork-oracle/gotrue/internal/security"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 
 	"github.com/didip/tollbooth/v5"
 	"github.com/didip/tollbooth/v5/limiter"

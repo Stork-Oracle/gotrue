@@ -7,7 +7,7 @@ import (
 
 	"github.com/crewjam/saml"
 	"github.com/stretchr/testify/require"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 func TestSAMLAssertionUserID(t *tst.T) {

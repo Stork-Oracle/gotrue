@@ -3,9 +3,9 @@ package models
 import (
 	"strings"
 
-	"github.com/supabase/auth/internal/api/provider"
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/api/provider"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 // GetAccountLinkingDomain returns a string that describes the account linking

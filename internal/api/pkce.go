@@ -4,9 +4,9 @@ import (
 	"regexp"
 
 	"github.com/gofrs/uuid"
-	"github.com/supabase/auth/internal/api/apierrors"
-	"github.com/supabase/auth/internal/models"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/api/apierrors"
+	"github.com/stork-oracle/gotrue/internal/models"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 const (

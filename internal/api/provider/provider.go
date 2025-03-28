@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 	"golang.org/x/oauth2"
 )
 

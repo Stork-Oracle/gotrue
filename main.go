@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/supabase/auth/cmd"
-	"github.com/supabase/auth/internal/observability"
+	"github.com/stork-oracle/gotrue/cmd"
+	"github.com/stork-oracle/gotrue/internal/observability"
 )
 
 //go:embed migrations/*

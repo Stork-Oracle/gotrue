@@ -3,7 +3,7 @@ package ratelimit
 import (
 	"testing"
 
-	"github.com/supabase/auth/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/conf"
 )
 
 func TestNew(t *testing.T) {

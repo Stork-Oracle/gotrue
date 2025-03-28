@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/utilities"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/utilities"
 )
 
 const (

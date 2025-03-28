@@ -13,9 +13,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/supabase/auth/internal/conf"
-	mail "github.com/supabase/auth/internal/mailer"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	mail "github.com/stork-oracle/gotrue/internal/mailer"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 type AnonymousTestSuite struct {

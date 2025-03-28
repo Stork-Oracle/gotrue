@@ -11,9 +11,9 @@ import (
 
 	"go.opentelemetry.io/otel/attribute"
 
-	"github.com/supabase/auth/internal/conf"
-	"github.com/supabase/auth/internal/observability"
-	"github.com/supabase/auth/internal/storage"
+	"github.com/stork-oracle/gotrue/internal/conf"
+	"github.com/stork-oracle/gotrue/internal/observability"
+	"github.com/stork-oracle/gotrue/internal/storage"
 )
 
 type Cleaner interface {

@@ -3,8 +3,8 @@ package hooks
 import (
 	"github.com/gofrs/uuid"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/supabase/auth/internal/mailer"
-	"github.com/supabase/auth/internal/models"
+	"github.com/stork-oracle/gotrue/internal/mailer"
+	"github.com/stork-oracle/gotrue/internal/models"
 )
 
 type HookType string
