@@ -6,6 +6,7 @@ import (
 	"database/sql"
 	"encoding/base64"
 	"fmt"
+	"regexp"
 	"strings"
 	"time"
 
@@ -706,14 +707,28 @@ func FindUsersInAudience(tx *storage.Connection, aud string, pageParams *Paginat
 
 // IsDuplicatedEmail returns whether a user exists with a matching email and audience.
 // If a currentUser is provided, we will need to filter out any identities that belong to the current user.
+// This function also checks for similar email addresses (same base email with different + suffixes).
 func IsDuplicatedEmail(tx *storage.Connection, email, aud string, currentUser *User) (*User, error) {
-	var identities []Identity
+	// Split email into local part and domain
+	parts := strings.Split(strings.ToLower(email), "@")
+	if len(parts) != 2 {
+		return nil, errors.New("invalid email format")
+	}
+	localPart, domain := parts[0], parts[1]
 
-	if err := tx.Eager().Q().Where("email = ?", strings.ToLower(email)).All(&identities); err != nil {
+	// Get base local part (remove +suffix if present)
+	baseLocalPart := strings.Split(localPart, "+")[0]
+
+	// Find all identities with similar email patterns
+	var identities []Identity
+	similarEmailQuery := fmt.Sprintf("email ~* '^%s(\\+.*)?@%s$'",
+		regexp.QuoteMeta(baseLocalPart),
+		regexp.QuoteMeta(domain))
+
+	if err := tx.Eager().Q().Where(similarEmailQuery).All(&identities); err != nil {
 		if errors.Cause(err) == sql.ErrNoRows {
 			return nil, nil
 		}
-
 		return nil, errors.Wrap(err, "unable to find identity by email for duplicates")
 	}
 
@@ -743,13 +758,17 @@ func IsDuplicatedEmail(tx *storage.Connection, email, aud string, currentUser *U
 		}
 	}
 
-	// out of an abundance of caution, if nothing was found via the
-	// identities table we also do a final check on the users table
-	user, err := FindUserByEmailAndAudience(tx, email, aud)
-	if err != nil && !IsNotFoundError(err) {
+	// Check users table directly with similar email pattern
+	user, err := findUser(tx, "instance_id = ? AND aud = ? AND is_sso_user = false AND email ~ ?",
+		uuid.Nil,
+		aud,
+		similarEmailQuery)
+	if err != nil {
+		if IsNotFoundError(err) {
+			return nil, nil
+		}
 		return nil, errors.Wrap(err, "unable to find user email address for duplicates")
 	}
-
 	return user, nil
 }
 
