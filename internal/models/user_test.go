@@ -4,13 +4,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"github.com/stretchr/testify/suite"
 	"github.com/stork-oracle/gotrue/internal/conf"
 	"github.com/stork-oracle/gotrue/internal/crypto"
 	"github.com/stork-oracle/gotrue/internal/storage"
 	"github.com/stork-oracle/gotrue/internal/storage/test"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"github.com/stretchr/testify/suite"
 	"golang.org/x/crypto/bcrypt"
 )
 

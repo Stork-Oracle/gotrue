@@ -14,7 +14,7 @@ services:
       - GOTRUE_DB_MIGRATIONS_PATH=/go/src/github.com/stork-oracle/gotrue/migrations
     volumes:
       - ./:/go/src/github.com/stork-oracle/gotrue
-    command: CompileDaemon --build="make build" --directory=/go/src/github.com/stork-oracle/gotrue --recursive=true -pattern="(.+\.go|.+\.env)" -exclude=auth -exclude=auth-arm64 -exclude=.env --command="/go/src/github.com/stork-oracle/gotrue/auth -c=.env.docker"
+    command: CompileDaemon --build="make build" --directory=/go/src/github.com/stork-oracle/gotrue --recursive=true -pattern="(.+\.go|.+\.env)" -exclude=gotrue -exclude=auth-arm64 -exclude=.env --command="/go/src/github.com/stork-oracle/gotrue/auth -c=.env.docker"
   postgres:
     build:
       context: .
@@ -30,5 +30,12 @@ services:
       - POSTGRES_DB=postgres
       # sets the schema name, this should match the `NAMESPACE` env var set in your .env file
       - DB_NAMESPACE=auth
+  
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - '1025:1025'
+      - '8025:8025'
+
 volumes:
   postgres_data:

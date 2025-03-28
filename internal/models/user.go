@@ -759,7 +759,7 @@ func IsDuplicatedEmail(tx *storage.Connection, email, aud string, currentUser *U
 	}
 
 	// Check users table directly with similar email pattern
-	user, err := findUser(tx, "instance_id = ? AND aud = ? AND is_sso_user = false AND email ~ ?",
+	user, err := findUser(tx, "instance_id = ? AND aud = ? AND is_sso_user = false AND LOWER(email) ~ ?",
 		uuid.Nil,
 		aud,
 		similarEmailQuery)
